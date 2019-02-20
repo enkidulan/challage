@@ -2,7 +2,7 @@
 A test project that I would like google not to index
 ****************************************************
 
-.. toctree:: local
+.. toctree::
 
 
 Requirement
