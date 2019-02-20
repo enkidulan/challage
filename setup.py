@@ -17,6 +17,17 @@ with open(os.path.join(here, 'CHANGES.rst')) as changes:
 
 requires = [
     'aiopyramid[gunicorn]',
+    'requests',
+    'oauthlib',
+    'aiohttp',
+    'colander',
+    'deform',
+    'pyramid_chameleon',
+]
+
+test_requires = [
+    'pytest',
+    'pylint',
 ]
 
 setup(
@@ -41,8 +52,12 @@ setup(
     zip_safe=False,
     test_suite=NAME,
     install_requires=requires,
+    extras_require={'test': test_requires},
     entry_points="""\
     [paste.app_factory]
     main = sev:main
+
+    [console_scripts]
+    worker = sev.worker:main
     """,
 )

@@ -33,3 +33,6 @@ perma-asset
 .cache
 .tox
 .eggs
+.installed.cfg
+bin/
+develop-eggs/
