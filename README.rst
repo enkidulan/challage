@@ -2,7 +2,7 @@
 A test project that I would like google not to index
 ****************************************************
 
-.. contents:: 
+.. contents::
 
 
 Requirement
@@ -49,6 +49,36 @@ Run project
 
     make run
 
-Project architecture and made decisions and choices
-===================================================
+How this can be deployed on AWS?
+================================
 
+.. image:: README.png
+
+.. uml::
+
+    @startuml
+
+    cloud "AWS Cloud" {
+
+        node "Worker Nodes 1 .. N" {
+            rectangle EventsListener
+        }
+
+        node "Web Server Nodes 1 .. N" {
+            rectangle WebServer
+        }
+
+        node "DB Sharding Nodes 1 .. N" {
+            database Database
+        }
+
+    }
+
+    EventsListener -- Database
+    WebServer -- Database
+
+
+    @enduml
+
+Bottlenecks and scaling out
+===========================
