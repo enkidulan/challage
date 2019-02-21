@@ -2,8 +2,9 @@
 A test project that I would like google not to index
 ****************************************************
 
-.. contents::
+http://axz.enkidulan.tk/login
 
+.. contents::
 
 Requirement
 ===========
