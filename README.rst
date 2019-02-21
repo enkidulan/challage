@@ -82,3 +82,5 @@ How this can be deployed on AWS?
 
 Bottlenecks and scaling out
 ===========================
+
+This application can be scaled out very easily, it even does not have DB. The only possible bottlenecks I see is a 3rd party API request limit.
